@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/logan/code/c++/todo_list/build",
+  "command": "/usr/bin/c++ -DCOMPONENT_BUILD -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/app.dir/main.cpp.o -c /Users/logan/code/c++/todo_list/main.cpp",
+  "file": "/Users/logan/code/c++/todo_list/main.cpp",
+  "output": "CMakeFiles/app.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/logan/code/c++/todo_list/build",
+  "command": "/usr/bin/c++ -DCOMPONENT_BUILD -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/app.dir/Todo.cpp.o -c /Users/logan/code/c++/todo_list/Todo.cpp",
+  "file": "/Users/logan/code/c++/todo_list/Todo.cpp",
+  "output": "CMakeFiles/app.dir/Todo.cpp.o"
+},
+{
+  "directory": "/Users/logan/code/c++/todo_list/build",
+  "command": "/usr/bin/c++ -DCOMPONENT_BUILD -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/app.dir/TodoList.cpp.o -c /Users/logan/code/c++/todo_list/TodoList.cpp",
+  "file": "/Users/logan/code/c++/todo_list/TodoList.cpp",
+  "output": "CMakeFiles/app.dir/TodoList.cpp.o"
+},
+{
+  "directory": "/Users/logan/code/c++/todo_list/build",
+  "command": "/usr/bin/c++ -DCOMPONENT_BUILD -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/app.dir/utils.cpp.o -c /Users/logan/code/c++/todo_list/utils.cpp",
+  "file": "/Users/logan/code/c++/todo_list/utils.cpp",
+  "output": "CMakeFiles/app.dir/utils.cpp.o"
+}
+]

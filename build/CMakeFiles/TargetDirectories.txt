@@ -1,0 +1,3 @@
+/Users/logan/code/c++/todo_list/build/CMakeFiles/app.dir
+/Users/logan/code/c++/todo_list/build/CMakeFiles/edit_cache.dir
+/Users/logan/code/c++/todo_list/build/CMakeFiles/rebuild_cache.dir

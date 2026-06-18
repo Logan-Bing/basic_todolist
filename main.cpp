@@ -1,11 +1,27 @@
 #include "header.hpp"
 
-#include "Task.hpp"
+#include "Todolist.hpp"
+
+using json = nlohmann::json;
 
 int main()
 {
-	Task t1(1, "Aprrendre c++", true);
+	system("clear");
+    ScreenInteractive screen = ScreenInteractive::TerminalOutput();
 
-	cout << t1;
+    std::string input;
+
+    // Composant input : texte + placeholder
+    Component input_component = Input(&input, "todos");
+
+    // Affichage simple
+    auto renderer = Renderer(input_component, [&] {
+        return vbox({
+            input_component->Render(),
+        });
+    });
+
+    screen.Loop(renderer);
+
 	return (0);
 }
