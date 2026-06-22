@@ -29,9 +29,16 @@ int		Todo::getId() const
 	return (this->id);
 }
 
-int		Todo::getPriority() const
+std::string Todo::getPriority() const
 {
-	return (this->priority);
+	std::string value;
+	if (this->priority == 0)
+		value = "LOW";
+	else if (this->priority == 1)
+		value = "MEDIUM";
+	else
+		value = "HIGH";
+	return (value);
 }
 
 int		Todo::isDone() const
@@ -44,20 +51,15 @@ const std::string&	Todo::getDescription() const
 	return (this->description);
 }
 
-// bool	todo::Task::operator<(const Task& rhs) const
-// {
-// 	return (this->priority < rhs.priority);
-// }
-//
-// std::ostream& operator<< (std::ostream& stream, const todo::Task& task)
-// {
-// 	std::string sym = task.isDone()? "[X]" : "[ ]";
-//
-// 	stream 
-// 		<< sym << " "
-// 		<< "id: " << task.getId()<< " - "
-// 		<< "description: " << task.getDescription() << " "
-// 		<< std::endl;
-//
-// 	return (stream);
-// }
+std::ostream& operator<< (std::ostream& stream, const Todo& todo)
+{
+	std::string sym = todo.isDone()? "[X]" : "[ ]";
+
+	stream 
+		<< sym << " "
+		<< "id: " << todo.getId()<< " - "
+		<< "description: " << todo.getDescription() << " "
+		<< std::endl;
+
+	return (stream);
+}

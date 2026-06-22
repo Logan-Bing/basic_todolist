@@ -3,6 +3,11 @@
 #include "header.hpp"
 #include <fstream>
 
+std::vector<Todo>& TodoList::getList()
+{
+	return this->list;
+}
+
 void	TodoList::addTask(const Todo& task)
 {
 	this->list.push_back(task);
@@ -43,27 +48,11 @@ void	TodoList::insertTaskInJson(const Todo& task)
 	this->updateDbFile();
 }
 
-// std::ostream&	operator<<(std::ostream& stream, const TodoList& todos)
-// {
-// 	for (size_t i = 0; i < todos.list.size(); i++)
-// 	{
-// 		stream << todos.list[i];
-// 	}
-// 	return (stream);
-// }
-
-// void	TodoList::saveWholeList()
-// {
-// 	std::fstream fs(DB_TASK, std::ios::app);
-// 	for (size_t i = 0; i < list.size(); i++)
-// 	{
-// 		json tmp;
-// 		tmp["id"] = list[i].getId();
-// 		tmp["description"] = list[i].getDescription();
-// 		tmp["done"] = list[i].isDone();
-// 		tmp["priority"] = list[i].getPriority();
-// 		this->db_task.push_back(tmp);
-// 	}
-//
-// 	fs << this->db_task;
-// }
+std::ostream&	operator<<(std::ostream& stream, const TodoList& todos)
+{
+	for (size_t i = 0; i < todos.list.size(); i++)
+	{
+		stream << todos.list[i];
+	}
+	return (stream);
+}

@@ -1,1 +1,1 @@
-[{"description":"Apprendre le c++","done":1,"id":0,"priority":2},{"description":"Apprendre le c++","done":1,"id":1,"priority":0},{"description":"Apprendre le c++","done":0,"id":2,"priority":2},{"description":"Apprendre le c++","done":1,"id":3,"priority":1}]
+[{"description":"Apprendre le c++","done":1,"id":0,"priority":"HIGH"},{"description":"Apprendre le hpc","done":0,"id":1,"priority":"LOW"},{"description":"Apprendre les maths ","done":1,"id":2,"priority":"MEDIUM"},{"description":"Apprendre les maths ","done":1,"id":3,"priority":"MEDIUM"}]

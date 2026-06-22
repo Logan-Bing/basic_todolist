@@ -3,7 +3,7 @@
 
 #include "header.hpp"
 #include "Todo.hpp"
-#include <ostream>
+#include <vector>
 
 
 class TodoList
@@ -20,9 +20,10 @@ class TodoList
 		void	updateDbFile();
 		void	insertTaskInJson(const Todo&);
 		void	removeTaskInJson(const Todo&);
+		std::vector<Todo>& getList();
 		Todo&	findTaskWithId(int id);
 
-		// friend std::ostream&	operator<<(std::ostream&, const TodoList&);
+		friend std::ostream&	operator<<(std::ostream&, const TodoList&);
 		// void	saveWholeList();
 };
 

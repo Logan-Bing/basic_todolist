@@ -15,7 +15,7 @@ class Todo
 
 	public:
 		Todo(const std::string&, bool, Priority);
-		// friend std::ostream& operator<< (std::ostream& stream, const Task& task);
+		friend std::ostream& operator<< (std::ostream& stream, const Todo& todo);
 		// bool operator< (const todo::Task& rhs) const;
 
 		// Methods
@@ -24,8 +24,8 @@ class Todo
 
 		// getter
 		int getId() const;
-		int	getPriority() const;
 		int	isDone() const;
+		std::string getPriority() const;
 		const std::string& getDescription() const;
 };
 

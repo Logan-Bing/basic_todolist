@@ -1,27 +1,22 @@
+#include "ftxui/dom/elements.hpp"
 #include "header.hpp"
 
 #include "Todolist.hpp"
+#include <string>
 
 using json = nlohmann::json;
 
 int main()
 {
+	TodoList l1;
+
+	l1.addTask(Todo("Apprendre le c++", 1, HIGH));
+	l1.addTask(Todo("Apprendre le hpc", 0, LOW));
+	l1.addTask(Todo("Apprendre les maths ", 1, MEDIUM));
+	l1.addTask(Todo("Apprendre les maths ", 1, MEDIUM));
+
 	system("clear");
-    ScreenInteractive screen = ScreenInteractive::TerminalOutput();
 
-    std::string input;
-
-    // Composant input : texte + placeholder
-    Component input_component = Input(&input, "todos");
-
-    // Affichage simple
-    auto renderer = Renderer(input_component, [&] {
-        return vbox({
-            input_component->Render(),
-        });
-    });
-
-    screen.Loop(renderer);
 
 	return (0);
 }
